@@ -4,7 +4,7 @@ setup(
     name="bop_viz_kit",
     version="0.1",
     packages=find_packages(),
-    install_requires=["opencv-python", "Pillow", "pandas", "open3d", "trimesh", "numpy", "pyrender"],
+    install_requires=["opencv-python", "Pillow", "pandas", "open3d", "trimesh", "numpy", "pyrender", "ruamel.yaml"],
     author="Van Nguyen NGUYEN",
     author_email="vanngn.nguyen@gmail.com",
     description="A package for visualizing 6D pose",
