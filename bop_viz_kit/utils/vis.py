@@ -120,8 +120,6 @@ def draw_pose_axis(cvImg, obj_openCV_pose, length_axis, intrinsic, thickness):
 def draw_pose_contour(
     cvImg, mesh, intrinsic, obj_openCV_pose, color, thickness=3, headless=False
 ):
-    R, T = obj_openCV_pose[:3, :3], obj_openCV_pose[:3, 3]
-    obj_pose = np.concatenate((R, T.reshape(-1, 1)), axis=-1)
     rendered_color, depth = render_offscreen(
         mesh, obj_openCV_pose, intrinsic, w=640, h=360, headless=headless
     )

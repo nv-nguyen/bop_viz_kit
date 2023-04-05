@@ -106,4 +106,9 @@ if __name__ == "__main__":
         plt.title("Contour")
 
         plt.subplots_adjust(wspace=0.0, hspace=0.15)
-        plt.savefig(f"examples/vis_BOP_{id_frame:06d}.png", bbox_inches="tight", pad_inches=0, dpi=100)
+        plt.savefig(
+            f"examples/vis_BOP_{id_frame:06d}.png",
+            bbox_inches="tight",
+            pad_inches=0.1,
+            dpi=100,
+        )
