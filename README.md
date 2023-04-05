@@ -1,5 +1,9 @@
 # BOP visualization kit
 
+<p align="center">
+  <img src=./media/BOP.gif width="80%"/>
+</p>
+
 A simple Python package to visualize 6D pose for BOP benchmark
 
 To install `bop_viz_kit`, run:

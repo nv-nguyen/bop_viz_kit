@@ -117,7 +117,9 @@ def draw_pose_axis(cvImg, obj_openCV_pose, length_axis, intrinsic, thickness):
     return cvImg
 
 
-def draw_pose_contour(cvImg, mesh, intrinsic, obj_openCV_pose, color, headless=False):
+def draw_pose_contour(
+    cvImg, mesh, intrinsic, obj_openCV_pose, color, thickness=3, headless=False
+):
     R, T = obj_openCV_pose[:3, :3], obj_openCV_pose[:3, 3]
     obj_pose = np.concatenate((R, T.reshape(-1, 1)), axis=-1)
     rendered_color, depth = render_offscreen(
@@ -129,7 +131,7 @@ def draw_pose_contour(cvImg, mesh, intrinsic, obj_openCV_pose, color, headless=F
         validMap, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE
     )
     # cvImg = cv2.drawContours(cvImg, contours, -1, (255, 255, 255), 1, cv2.LINE_AA) # border
-    cvImg = cv2.drawContours(cvImg, contours, -1, color, 2)
+    cvImg = cv2.drawContours(cvImg, contours, -1, color, thickness)
     return rendered_color, cvImg
 
 
