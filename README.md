@@ -48,7 +48,14 @@ depth, img = bop_viz.draw_pose_contour(
     img, mesh intrinsic, obj_pose, color, thickness=5, headless=False
 ) # set headless=True when running on headless system
 ```
+5. Visualize interactively, please checkout the demo [vis_interactive.py](https://github.com/nv-nguyen/bop_viz_kit/blob/main/examples/vis_interactive.py)
+
+<p align="center">
+  <img src=./media/BOP_interactive.gif width="80%"/>
+</p>
+
 ## TODO 
+
 - Blended visualization with alpha channel
 - Omni3D's bounding box visualization (BOP+ScanNet)
 - Simple script to render CAD with BlenderProc
