@@ -14,13 +14,14 @@ pip install -e bop_viz_kit
 ```
 
 ## Usage
+Note that object's poses should be defined in OpenCV coordinate frame (same as BOP benchmark)
 1. Visualize 3D bounding box
 ```python
 import bop_viz_kit as bop_viz
 mesh = bop_viz.load_mesh(mesh_path)
 bbox = bop_viz.get_bbox_from_mesh(mesh)# computing 3D box from mesh
 img = bop_viz.draw_bounding_box(
-    img, obj_pose, bbox, intrinsic, color=(255, 0, 0), thickness=2,
+    img, obj_pose, bbox, intrinsic, color, thickness=2,
 )
 ```
 2. Visualize coordinate frame
